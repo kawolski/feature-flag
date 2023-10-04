@@ -6,14 +6,16 @@ const ShowCounter = async() => {
 
     console.log("show counter working....");
 
-    const lb = process.env.ASPNETCORE_ENVIRONMENT || "prod";
+    const lb = process.env.ASPNETCORE_ENVIRONMENT;
+    
+    console.log("ASPNETCORE_ENVIRONMENT : ", lb);
     
     var val = await client.getConfigurationSetting({ 
         key: ".appconfig.featureflag/demo",
         label: lb
     });
 
- 
+    console.log(val);
 
     const parsedValue = val.value ? JSON.parse(val.value) : null;
 
