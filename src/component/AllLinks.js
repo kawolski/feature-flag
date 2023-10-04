@@ -27,13 +27,13 @@ const AllLinks =  () => {
                   style={{visibility: isEnabled ? 'visible' : 'hidden'}}
                   to={`/demo1`}
                 >
-                  <li>Demo1</li>
+                  <li>Dev : Demo1</li>
                 </NavLink>
                 <NavLink
                   className='link'
                   to={`/demo2`}
                 >
-                  <li>Demo2</li>
+                  <li>Dev : Demo2</li>
                 </NavLink>
               </ul>
       </>
