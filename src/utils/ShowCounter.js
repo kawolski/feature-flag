@@ -6,9 +6,9 @@ const ShowCounter = async() => {
 
     console.log("show counter working....");
 
-    const lb = process.env.ASPNETCORE_ENVIRONMENT;
+    const lb = process.env.REACT_APP_ASPNETCORE_ENVIRONMENT;
     
-    console.log("ASPNETCORE_ENVIRONMENT : ", lb);
+    console.log("REACT_APP_ASPNETCORE_ENVIRONMENT : ", lb);
     
     var val = await client.getConfigurationSetting({ 
         key: ".appconfig.featureflag/demo",
