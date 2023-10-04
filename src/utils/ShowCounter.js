@@ -6,7 +6,12 @@ const ShowCounter = async() => {
 
     console.log("show counter working....");
 
-    var val = await client.getConfigurationSetting({ key: ".appconfig.featureflag/demo" });
+    const lb = process.env.ASPNETCORE_ENVIRONMENT || "prod";
+    
+    var val = await client.getConfigurationSetting({ 
+        key: ".appconfig.featureflag/demo",
+        label: lb
+    });
 
  
 
